@@ -34,35 +34,57 @@
             <a href="index.html" class="nav-logo" aria-label="Home">
                 <img src="assets/images/logo.png" alt="Euphoro Tech Logo" class="nav-logo-img">
             </a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
-                <li><a href="affiliates.html" class="nav-link">Products</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                    <li><a href="affiliates.html" class="nav-link">Products</a></li>
+                </ul>
+                <!-- Theme Toggle -->
+                <button 
+                    class="theme-toggle" 
+                    id="themeToggle" 
+                    aria-label="Toggle dark mode"
+                    title="Toggle theme"
+                >
+                    <i class="fas fa-sun" id="lightIcon"></i>
+                    <i class="fas fa-moon" id="darkIcon"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <main id="main">
         <section class="hero" id="hero">
-            <!-- Decorative floating elements -->
-            <div class="hero-decoration"></div>
-            <div class="hero-decoration"></div>
-            
             <div class="container">
                 <div class="hero-content">
-                    <div class="profile-image-container">
-                        <img 
-                            src="assets/images/logo.png" 
-                            alt="Euphoro Tech logo"
-                            class="profile-image"
-                            loading="eager"
-                            id="profileImage"
-                        >
+                    <div class="profile-section">
+                        <div class="profile-image-container">
+                            <img 
+                                src="assets/images/logo.png" 
+                                alt="Euphoro Tech logo"
+                                class="profile-image"
+                                loading="eager"
+                                id="profileImage"
+                            >
+                        </div>
+                        <div class="hero-text">
+                            <h1 class="hero-title" id="heroTitle">Loading...</h1>
+                            <p class="hero-tagline" id="heroTagline">Loading...</p>
+                            <p class="hero-bio" id="heroBio">Loading...</p>
+                        </div>
                     </div>
-                    <div class="hero-text">
-                        <h1 class="hero-title" id="heroTitle">Loading...</h1>
-                        <p class="hero-tagline" id="heroTagline">Loading...</p>
-                        <p class="hero-bio" id="heroBio">Loading...</p>
+                    
+                    <!-- Quick Actions -->
+                    <div class="hero-actions">
+                        <a href="affiliates.html" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Explore Products
+                        </a>
+                        <a href="#social" class="btn btn-secondary">
+                            <i class="fas fa-user"></i>
+                            Connect
+                        </a>
                     </div>
                 </div>
             </div>
@@ -71,9 +93,41 @@
         <!-- Social Links -->
         <section class="social-section" id="social">
             <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
+                <div class="section-header">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-subtitle">Find me on these platforms</p>
+                </div>
                 <div class="social-links" id="socialLinks">
                     <!-- Social links will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Features/Stats Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Curated Quality</h3>
+                        <p>Hand-picked products that I personally use and recommend</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Trusted Reviews</h3>
+                        <p>Honest opinions based on real experience and testing</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Boost Productivity</h3>
+                        <p>Tools and products designed to enhance your lifestyle</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -82,11 +136,18 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
+                    <div class="cta-badge">
+                        <i class="fas fa-gem"></i>
+                        Premium Selection
+                    </div>
                     <h2 class="cta-title">Discover Curated Excellence</h2>
                     <p class="cta-description">Explore hand-picked products and tools that I personally use and recommend to boost your productivity and lifestyle</p>
-                    <a href="affiliates.html" class="btn btn-primary" aria-label="View curated products">
-                        Explore Products <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                    </a>
+                    <div class="cta-actions">
+                        <a href="affiliates.html" class="btn btn-primary btn-lg" aria-label="View curated products">
+                            <i class="fas fa-arrow-right"></i>
+                            Explore Products
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -96,14 +157,24 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact">
-                    <p>Contact: <a href="mailto:" id="contactEmail">Loading...</a></p>
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="assets/images/logo.png" alt="Euphoro Tech" class="footer-logo">
+                        <p class="footer-tagline">Curating excellence for modern living</p>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Get in Touch</h4>
+                        <p>Email: <a href="mailto:" id="contactEmail">Loading...</a></p>
+                    </div>
                 </div>
-                <div class="footer-disclosure">
-                    <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. I may earn a commission from purchases made through these links at no additional cost to you. I only recommend products I personally use or believe will add value to my audience.</p>
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; <span id="currentYear"></span> Euphoro Tech. All rights reserved.</p>
+                <div class="footer-divider"></div>
+                <div class="footer-bottom">
+                    <div class="footer-disclosure">
+                        <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. I may earn a commission from purchases made through these links at no additional cost to you. I only recommend products I personally use or believe will add value to my audience.</p>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>&copy; <span id="currentYear"></span> Euphoro Tech. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
         </div>

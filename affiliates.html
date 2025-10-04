@@ -34,25 +34,37 @@
             <a href="index.html" class="nav-logo" aria-label="Home">
                 <img src="assets/images/logo.png" alt="Euphoro Tech Logo" class="nav-logo-img">
             </a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="affiliates.html" class="nav-link active" aria-current="page">Products</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="affiliates.html" class="nav-link active" aria-current="page">Products</a></li>
+                </ul>
+                <!-- Theme Toggle -->
+                <button 
+                    class="theme-toggle" 
+                    id="themeToggle" 
+                    aria-label="Toggle dark mode"
+                    title="Toggle theme"
+                >
+                    <i class="fas fa-sun" id="lightIcon"></i>
+                    <i class="fas fa-moon" id="darkIcon"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Header -->
     <header class="page-header">
         <div class="container">
-            <h1 class="page-title gradient-text">Curated Products</h1>
-            <p class="page-subtitle">Hand-picked tools and products that have made a real difference in my work and life</p>
-        </div>
-    </header>
-
-    <!-- Search & Filter -->
-    <section class="filters-section">
-        <div class="container">
-            <div class="filters-container">
+            <div class="page-header-content">
+                <div class="page-badge">
+                    <i class="fas fa-star"></i>
+                    Premium Selection
+                </div>
+                <h1 class="page-title">Curated Products</h1>
+                <p class="page-subtitle">Hand-picked tools and products that have made a real difference in my work and life</p>
+                
+                <!-- Search in Header -->
                 <div class="search-container">
                     <input 
                         type="text" 
@@ -62,13 +74,18 @@
                         aria-label="Search affiliate products"
                     >
                     <i class="fas fa-search search-icon" aria-hidden="true"></i>
-                </div>
-                <div class="filter-tags" id="filterTags">
-                    <!-- Filter tags will be populated by JavaScript -->
+                    <button 
+                        class="clear-search" 
+                        id="clearSearch" 
+                        aria-label="Clear search"
+                        style="display: none;"
+                    >
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Products Grid -->
     <main class="products-section">
@@ -81,10 +98,28 @@
                     <i class="fas fa-search" aria-hidden="true"></i>
                     <h3>No products found</h3>
                     <p>Try adjusting your search or filter criteria</p>
+                    <button class="btn btn-primary" onclick="clearAllFilters()">
+                        <i class="fas fa-refresh"></i>
+                        Reset Filters
+                    </button>
                 </div>
             </div>
         </div>
     </main>
+
+    <!-- Product Details Modal -->
+    <div class="modal-overlay" id="productModal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" id="modalClose" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
 
     <!-- Loading State -->
     <div class="loading" id="loading">
@@ -96,14 +131,24 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-contact">
-                    <p>Contact: <a href="mailto:" id="contactEmail">Loading...</a></p>
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="assets/images/logo.png" alt="Euphoro Tech" class="footer-logo">
+                        <p class="footer-tagline">Curating excellence for modern living</p>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Get in Touch</h4>
+                        <p>Email: <a href="mailto:" id="contactEmail">Loading...</a></p>
+                    </div>
                 </div>
-                <div class="footer-disclosure">
-                    <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. I may earn a commission from purchases made through these links at no additional cost to you. I only recommend products I personally use or believe will add value to my audience.</p>
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+                <div class="footer-divider"></div>
+                <div class="footer-bottom">
+                    <div class="footer-disclosure">
+                        <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. I may earn a commission from purchases made through these links at no additional cost to you. I only recommend products I personally use or believe will add value to my audience.</p>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>&copy; <span id="currentYear"></span> Euphoro Tech. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
         </div>

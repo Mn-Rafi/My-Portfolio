@@ -1,5 +1,5 @@
 // ===================================
-// Main JavaScript - Core Functionality
+// Main JavaScript - Core Functionality with Theme Support
 // ===================================
 
 class PersonalSite {
@@ -16,6 +16,7 @@ class PersonalSite {
             this.setupLazyLoading();
             this.setupAccessibility();
             this.updateFooter();
+            this.setupThemeToggle();
         } catch (error) {
             console.error('Failed to initialize site:', error);
             this.showError('Failed to load profile data');
@@ -97,10 +98,12 @@ class PersonalSite {
         socialLinksContainer.innerHTML = this.profileData.socialLinks
             .map(link => {
                 const iconClass = socialIconMap[link.platform.toLowerCase()] || 'fas fa-link';
+                const platform = link.platform.toLowerCase();
                 return `
                     <a 
                         href="${link.url}" 
                         class="social-link" 
+                        data-platform="${platform}"
                         target="_blank" 
                         rel="noopener noreferrer"
                         aria-label="${link.platform} profile"
@@ -111,6 +114,48 @@ class PersonalSite {
                 `;
             })
             .join('');
+    }
+
+    setupThemeToggle() {
+        const themeToggle = document.getElementById('themeToggle');
+        if (!themeToggle) return;
+
+        // Check for saved theme preference or default to light mode
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        this.setTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            this.setTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Listen for system theme changes
+        if (window.matchMedia) {
+            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            mediaQuery.addListener((e) => {
+                if (!localStorage.getItem('theme')) {
+                    this.setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        }
+    }
+
+    setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        
+        // Update meta theme-color for mobile browsers
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute('content', theme === 'dark' ? '#0f1419' : '#ffffff');
+        }
+        
+        // Animate theme transition
+        document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+        setTimeout(() => {
+            document.body.style.transition = '';
+        }, 300);
     }
 
     setupLazyLoading() {
