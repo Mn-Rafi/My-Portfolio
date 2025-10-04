@@ -1,0 +1,29 @@
+{
+  "name": "Euphoro Tech",
+  "tagline": "Creative Professional & Content Creator",
+  "bio": "Welcome to my personal space on the web! I'm passionate about sharing quality products and experiences that have made a positive impact on my life. Browse through my curated selection of affiliate products below.",
+  "email": "admin@euphorolink.com",
+  "profileImage": "assets/images/logo.png",
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/in/yourprofile"
+    },
+    {
+      "platform": "Instagram", 
+      "url": "https://instagram.com/yourhandle"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/yourhandle"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://youtube.com/@yourchannel"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/yourusername"
+    }
+  ]
+}

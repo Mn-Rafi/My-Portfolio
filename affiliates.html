@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curated Products | Euphoro Tech</title>
+    <meta name="description" content="Hand-picked products and tools I personally use and recommend">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Curated Products | Euphoro Tech">
+    <meta property="og:description" content="Hand-picked products and tools I personally use and recommend">
+    <meta property="og:type" content="website">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Home">
+                <img src="assets/images/logo.png" alt="Euphoro Tech Logo" class="nav-logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="affiliates.html" class="nav-link active" aria-current="page">Products</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title gradient-text">Curated Products</h1>
+            <p class="page-subtitle">Hand-picked tools and products that have made a real difference in my work and life</p>
+        </div>
+    </header>
+
+    <!-- Search & Filter -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search products..." 
+                        class="search-input"
+                        aria-label="Search affiliate products"
+                    >
+                    <i class="fas fa-search search-icon" aria-hidden="true"></i>
+                </div>
+                <div class="filter-tags" id="filterTags">
+                    <!-- Filter tags will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <main class="products-section">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+            <div class="no-results" id="noResults" style="display: none;">
+                <div class="no-results-content">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <h3>No products found</h3>
+                    <p>Try adjusting your search or filter criteria</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading State -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+        <p>Loading products...</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-contact">
+                    <p>Contact: <a href="mailto:" id="contactEmail">Loading...</a></p>
+                </div>
+                <div class="footer-disclosure">
+                    <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. I may earn a commission from purchases made through these links at no additional cost to you. I only recommend products I personally use or believe will add value to my audience.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear"></span> Your Name. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/affiliates.js"></script>
+</body>
+</html>

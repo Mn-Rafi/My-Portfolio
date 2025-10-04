@@ -1,0 +1,160 @@
+{
+  "products": [
+    {
+      "id": "tech-laptop-stand",
+      "title": "Adjustable Laptop Stand",
+      "description": "Ergonomic aluminum laptop stand that improved my posture and productivity",
+      "image": "assets/images/laptop-stand.jpg",
+      "price": "$49.99",
+      "affiliateLink": "https://example.com/affiliate-link-1",
+      "ctaText": "Buy Now",
+      "tags": ["tech", "productivity", "workspace"],
+      "attachments": [
+        {
+          "name": "Setup Guide",
+          "url": "assets/files/laptop-stand-guide.pdf",
+          "type": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "wellness-meditation-app",
+      "title": "Premium Meditation App Subscription",
+      "description": "Life-changing meditation app that helped me develop a consistent mindfulness practice",
+      "image": "assets/images/meditation-app.jpg",
+      "price": "$12.99/month",
+      "affiliateLink": "https://example.com/affiliate-link-2",
+      "ctaText": "Start Free Trial",
+      "tags": ["wellness", "mental health", "apps"],
+      "attachments": [
+        {
+          "name": "Beginner's Guide",
+          "url": "assets/files/meditation-guide.pdf",
+          "type": "pdf"
+        },
+        {
+          "name": "Quick Reference",
+          "url": "assets/images/meditation-tips.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "id": "fitness-resistance-bands",
+      "title": "Professional Resistance Bands Set",
+      "description": "Complete home gym solution that fits in a small bag - perfect for travel workouts",
+      "image": "assets/images/resistance-bands.jpg",
+      "price": "$29.99",
+      "affiliateLink": "https://example.com/affiliate-link-3",
+      "ctaText": "Get Yours",
+      "tags": ["fitness", "home gym", "travel"],
+      "attachments": [
+        {
+          "name": "Workout Routines",
+          "url": "assets/files/resistance-workout-guide.pdf",
+          "type": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "education-online-course",
+      "title": "Web Development Masterclass",
+      "description": "Comprehensive course that transformed my coding skills and career prospects",
+      "image": "assets/images/coding-course.jpg",
+      "price": "$199.99",
+      "affiliateLink": "https://example.com/affiliate-link-4",
+      "ctaText": "Enroll Now",
+      "tags": ["education", "coding", "career"],
+      "attachments": [
+        {
+          "name": "Course Syllabus",
+          "url": "assets/files/course-syllabus.pdf",
+          "type": "pdf"
+        },
+        {
+          "name": "Sample Project",
+          "url": "assets/files/sample-project.zip",
+          "type": "file"
+        }
+      ]
+    },
+    {
+      "id": "productivity-task-manager",
+      "title": "Premium Task Management Software",
+      "description": "The productivity app that finally helped me organize my life and hit my goals",
+      "image": "assets/images/task-manager.jpg",
+      "price": "$8.99/month",
+      "affiliateLink": "https://example.com/affiliate-link-5",
+      "ctaText": "Try Free",
+      "tags": ["productivity", "apps", "organization"],
+      "attachments": [
+        {
+          "name": "Getting Started",
+          "url": "assets/files/task-manager-setup.pdf",
+          "type": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "kitchen-air-fryer",
+      "title": "Smart Air Fryer Pro",
+      "description": "Game-changing kitchen appliance that makes healthy cooking quick and delicious",
+      "image": "assets/images/air-fryer.jpg",
+      "price": "$129.99",
+      "affiliateLink": "https://example.com/affiliate-link-6",
+      "ctaText": "Order Now",
+      "tags": ["kitchen", "cooking", "healthy"],
+      "attachments": [
+        {
+          "name": "Recipe Collection",
+          "url": "assets/files/air-fryer-recipes.pdf",
+          "type": "pdf"
+        },
+        {
+          "name": "Quick Start Guide",
+          "url": "assets/files/air-fryer-manual.pdf",
+          "type": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "travel-backpack",
+      "title": "Anti-Theft Travel Backpack",
+      "description": "Secure and organized backpack perfect for digital nomads and frequent travelers",
+      "image": "assets/images/travel-backpack.jpg",
+      "price": "$89.99",
+      "affiliateLink": "https://example.com/affiliate-link-7",
+      "ctaText": "Shop Now",
+      "tags": ["travel", "backpack", "security"],
+      "attachments": [
+        {
+          "name": "Packing Guide",
+          "url": "assets/files/packing-guide.pdf",
+          "type": "pdf"
+        }
+      ]
+    },
+    {
+      "id": "books-productivity-guide",
+      "title": "\"Atomic Habits\" by James Clear",
+      "description": "The book that completely changed how I approach building positive habits and breaking bad ones",
+      "image": "assets/images/atomic-habits.jpg",
+      "price": "$16.99",
+      "affiliateLink": "https://example.com/affiliate-link-8",
+      "ctaText": "Read Now",
+      "tags": ["books", "productivity", "self-improvement"],
+      "attachments": [
+        {
+          "name": "Key Takeaways",
+          "url": "assets/files/atomic-habits-summary.pdf",
+          "type": "pdf"
+        },
+        {
+          "name": "Habit Tracker Template",
+          "url": "assets/files/habit-tracker.pdf",
+          "type": "pdf"
+        }
+      ]
+    }
+  ]
+}

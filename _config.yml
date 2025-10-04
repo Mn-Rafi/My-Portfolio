@@ -1,0 +1,9 @@
+# Exclude from processing
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+node_modules/
+vendor/
+
+# Include these files
+!assets/
